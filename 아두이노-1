@@ -1,3 +1,18 @@
+#include <LedControl.h>
+
+#include <LedControl.h>
+LedControl lc = LedControl(12,11,10,1);
+void setup () {
+  lc.shutdown(0,true);
+  lc.setLed(0,0,0,HIGH);//행 열 HIGH
+  lc.setLed(0,0,7,HIGH);//행 열 HIGH
+ 
+  
+  }
+
+void loop () {}
+
+
 /*핀모드 세팅먼저*/ 
 void setup() {
   pinMode(9,OUTPUT);
