@@ -17,3 +17,39 @@ print(10%3)
 print(10.0%3)
 print(10%3.0)
 print(10.0%3.0)
+
+
+
+
+
+#숫자 리터럴에 _를 사용 할 수 있음 
+#_는 숫자 사이에만 사용 가능
+#단위 위치와는 상관 없음
+월급=2_977_000
+print(월급)
+
+#문자 리터럴
+city = 'seoul'
+print(city)
+
+
+#C언어 에서 'A' 와 "A"의 타입은?
+#          char   string형식 
+#Python에서 'A' 와 "A"의 타입은?
+#모두 문자열형 str
+print(type('a'))
+print(type("a"))
+#동일한 변수 city에 대해
+#현재 어느 타입의 갑시 저장되어있는가에 
+#따라 변수 city의 타입이 결정됨
+city = 'seoul'
+print(type(city))
+
+city = 1
+print (type(city))
+
+#문자열 리터럴과 산술연산자 *, +
+#+연산자 테스트 
+#print("hello"+" " + "python") 이건 안됨
+print("10" * 2)
+print(2*"10")   
