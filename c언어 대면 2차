@@ -1,0 +1,83 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+// 탐색 및 정렬에 사용되는 배열
+// 문자열 기초
+// 글자,알파벳,워드 카운트 이해
+// c 언어 3주 
+// 탐색(search), 정렬(sort), 순차적탐색(sequential serch), 정렬(버블소트), insertion sort, quick sort
+// 시험 버블소트 퀵소트(재귀적호출=recursive call)
+
+//void print_array(int arr[], int size) // "배열 주고 갯수 주네, 배열로 받을 때 아무것도 안쓰네","형식임"
+//{
+//	int i;
+//	for (i = 0; i < size; i++)
+//		printf("%d ", arr[i]);
+//	printf("\n");
+//}
+//
+//int main(void)
+//{
+//	int data[] = { 12, 34, 51, 22, 91, 12, 5 }; //(괄호 안에 숫자 없으면 갯수 상관 없음)
+//	int size, i ;
+//	int key;
+//	
+//	size = sizeof(data) / sizeof(data[0]);
+//	printf("data =");
+//	print_array(data, size);//("데이터 주소로 주네","1차원 배열은 인덱스 떼버리면 주소로 바뀜")
+//
+//	printf("찾을 값(키)?");
+//	scanf_s("%d", &key);
+//	for (i = 0; i < size; i++) {
+//		if(data[i] == key)
+//			printf("찾은 원소의 인덱스: %d\n", i);
+//	}
+//}
+
+void print_array(int arr[], int size) // "배열 주고 갯수 주네, 배열로 받을 때 아무것도 안쓰네","형식임"
+{
+	int i;
+	for (i = 0; i < size; i++)
+		printf("%d ", arr[i]);
+	printf("\n");
+}
+void bubble_sort(int arr1[], int cnt)
+{
+	int temp;
+
+	for (int i = 0; i < cnt; i++)
+	{
+		for (int j = 0; j < cnt- i-1; j++) { //여기가 핵심인듯 중간고사 나온다고함
+			if(arr1[j]>arr1[j+1])
+
+			{
+				temp = arr1[j];
+				arr1[j] = arr1[j + 1];
+				arr1[j + 1 ]= temp;
+			}
+
+		}
+	}
+	print_array(arr1, cnt);
+}
+int main(void)
+{
+	int data[] = { 12, 34, 51, 22, 91, 12, 5 }; //(괄호 안에 숫자 없으면 갯수 상관 없음)
+	int size, i;
+	int key;
+
+	size = sizeof(data) / sizeof(data[0]);
+    printf("data =");
+	print_array(data, size);//("데이터 주소로 주네","1차원 배열은 인덱스 떼버리면 주소로 바뀜")
+	bubble_sort(data, size);
+	
+	printf("찾을 값(키)?");
+	scanf_s("%d", &key);
+	for (i = 0; i < size; i++) {
+		if (data[i] == key)
+			printf("찾은 원소의 인덱스: %d\n", i);
+	}
+}
+
+
+	
+
