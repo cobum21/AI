@@ -1,0 +1,84 @@
+'''
+#만약 x와 x가 구분된다면? 값음 다르게 출력
+import keyword
+x=10
+x=100
+print(x)
+print(x)
+
+#파이썬 키워드는?
+print(keyword.kwlist)
+
+
+# hello python을 출력시키는 여러가지 방법
+print('hello python')
+print('hello' 'python')
+print('hello', 'python')
+print('hello'+'python')
+print('{}{}'.format('hello','python'))
+print('{0}{1}'.format('hello','python'))
+print('{1}{0}'.format('hello','python'))
+print('{0}{1}{0}'.format('hello','python'))
+#두 줄로 출력
+print('hello ',end='') # end의 기본은 \n
+print('python')
+
+print('hello','python',sep='|')#sep는 각 값을 구분,기본은 공백
+'''
+'''
+# 파이썬의 동적 타이피 특성 알아보기
+# type() - 현재 매개변수의 데이터 타입 출력 
+# 리터럴의(글자 자체가 값이 되는거) 타입 알아보기 
+print(type(10))
+print(type(10.0))
+print(type(10+2j)) #복소수 표기, 반드시 j, j앞에는 반드시 숫자필요 
+print(type('hello'))
+# 변수 x의 타입변화(dynamic typing)
+x = 10
+print(type(x))
+
+# 리터럴 10은 x,y에 각가 따로 보관 될까?
+# id() : 매개변수의 메모리 주소(?)를 반환  
+x = 10
+y = 10
+print(id(x))
+print(id(y))
+'''
+# 문자열 슬라이싱(slicing)
+#    0 1 2 3 4 5 6 7 8 9 
+s = '경민대학교 도시안전 융합 전공'
+print(s[:5])
+
+# '전공만 출력'
+print(s[13:])
+print(s[-2]+s[-1])
+
+# 한 칸씩 띄어서 출력 ==> '경대교...'
+print(s[::2])
+# 문자열 뒤집어서 출력
+print(s[::-1])
+
+#'민대경'출력
+print(s[2::-1])
+#고민을 해보세요 
+print(s[2::-1])
+
+print(s[:0])
+
+# 문자열이 얼마나 길까? --> 글자 갯숙 몇개?
+print(len(s))
+
+#문자열의 맨 마ㅣ막 글자를 슬라이싱 하려면?
+print(s[-1])
+print(s[len(s)-1])
+
+# 문자열로 '경미대학교'라고 출력 
+print('\'경민대학교\'')
+print("'경민대학교") # 파이썬에서 문자열은 ''또는""로 표시 
+# \를 문자ㅕㄹ에 포함해서 출력하려면
+# 기본적으로 문자열에 \는 그 다음 글자를 그대로 출력하도록 해줌
+print('1학년\\2학기')
+
+
+
+
