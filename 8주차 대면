@@ -1,0 +1,114 @@
+#if 문의 구조에서 i----
+#       문장들....
+
+#헤드와 같은줄에 써도 되나?
+if True : print('참입니다.')
+#헤드와 같은 줄에 조건이 참일 때 실행할(suit)를 같이 써도 되나?
+#;로 슈트 내의 각 문장을 구분할 수 있음(세미콜론이 문장의 구분점이다.)
+if True : print('참입니다.');print('진짜참입니다.')
+#for 변수 in 범위식 :
+#   수핼 할 문장1
+#   수행 할 문장2
+#   수행 할 문장3
+#       ...
+#   수행 할 문장n
+#리스트,투플,딕셔너리,셋
+#리스트에 대한 반복문
+fruits = ["사과","바나나","딸기"]
+for f in fruits: 
+    print(f)
+#투플에 대한 반복몬
+student = ("김경민","19831005","융합소프트웨어과","1학년")
+for s in student:
+    print(s)
+#딕셔너리에 대한 반복문
+student = ("이름":"김민성","학번":"19831005","학과":"융합소프트웨어과,"학년":"1학년")
+for k, v in student.items():
+    print(k,v)
+#셋에 대한 반복문
+languages=("c","java","python",javasciript")
+for l in languages:
+    print(l)
+#문자열에 대한 반복문
+애국가="""동해물과 배굳산이 마르고 닳도록"""
+for c in 애국가:
+    print(c,end='')#end를 붙이면 옆으로 출력됨
+#범위지정을 사용한 반복문
+#for(i=0,i<10,i++){
+# printf("%d",i)}
+#for i in range(10):
+#   print(i)
+#for 문을 사용해서 1부터 10까지의 짝수를 모두 출력
+#단 범위를 표현하기 위해 ranege()를 사용하라!
+#for i in range(2,11,2) :
+#    print(i,end='')
+#break 사용
+fruits = ["사과","바나나","딸기"]
+i = 0
+for f in fruits:
+ if f == "바나나":
+ i += 1
+ break
+print(f)
+i += 1
+print(i)
+#continue 사용
+fruits = ["사과","바나나","딸기"]
+for f in fruits:
+    if f == "바나나":
+        continue
+    print(f)
+#pass 사용
+fruits = ["사과","바나나","딸기"]
+for f in fruits:
+    pass
+#for~else 구조
+for x in ["사과","바나나","딸기"]:
+    print("{}를 팔았습니다.".format(x))
+    else:
+
+# 중첩된 for 문
+colors=["빨강","노랑","빨강"]
+fruits=["사과","바나나","딸기"]
+for c in colors:
+    for f in fruits:
+        print("{}{}".format(c,f)end==' ')
+        pritn()
+#범위 슬라이싱 활용 반복문
+languages=["c","java","python","javascript","visual basic"]
+for l in languages[-3:]:
+    print(l)
+
+#ragne() 활용 반복문
+languages = ["c","java","python","javascript","visual basic"]
+for l in ragne[5]:
+    print(laguages[1])
+
+#While 문
+i= = 1
+whuld 1<6
+print(i)
+i+=1
+#while break 
+i = 1 
+while<6:
+print(i)
+if i == 3:
+    break 
+i+=1
+#whule continue
+i=0 
+whilei<6:
+i +=1
+if i ==3:
+    continue 
+print(i)
+#whle~else
+i = 1
+whilei<6:
+print(i)
+i=+1
+else:
+    print("i가6이 되었네요.")
+#교안 참고 하여 리스트 메소드 알아야함(이유는 알지마 그냥 외워!!)
+#파이썬의 컬랙션을 외워라 (개념을 확실히 이해)
